@@ -5,7 +5,7 @@
     <div class="description">{{description}}</div>
     <div class="current">
       <div class="visual">
-        <div class="cloud">cloud</div>
+        <div class="icon cloudy" alt="cloudy"></div>
         <div class="temp">{{temp}}</div>
         <div class="scale">º</div>
       </div>
@@ -19,7 +19,7 @@
     <div class="forecast">
       <div class="forecast-day" v-for="forecast in forecast">
         <div class="date">{{forecast.date}}</div>
-        <div class="icon">{{forecast.icon}}</div>
+        <div :class="'icon ' + forecast.icon"></div>
         <div class="high-temp">{{forecast.highTemp}}</div>
         <div class="low-temp">{{forecast.lowTemp}}</div>
       </div>
@@ -41,15 +41,23 @@ export default {
       wind: '4mph SW',
       pollen: 36,
       forecast: [
-        { 'date': 'Monday', 'icon': 'cloud', 'lowTemp': 28, 'highTemp': 45 },
-        { 'date': 'Tuesday', 'icon': 'sun', 'lowTemp': 30, 'highTemp': 48 },
-        { 'date': 'Wednesday', 'icon': 'sun-cloud', 'lowTemp': 27, 'highTemp': 31 },
+        { 'date': 'Monday', 'icon': 'sunny', 'lowTemp': 28, 'highTemp': 45 },
+        { 'date': 'Tuesday', 'icon': 'partly', 'lowTemp': 30, 'highTemp': 48 },
+        { 'date': 'Wednesday', 'icon': 'cloudy', 'lowTemp': 27, 'highTemp': 31 },
         { 'date': 'Thursday', 'icon': 'raining', 'lowTemp': 26, 'highTemp': 32 },
-        { 'date': 'Friday', 'icon': 'cloud', 'lowTemp': 25, 'highTemp': 40 },
-        { 'date': 'Saturday', 'icon': 'sun-cloud', 'lowTemp': 30, 'highTemp': 43 },
-        { 'date': 'Sunday', 'icon': 'sun', 'lowTemp': 26, 'highTemp': 42 }
+        { 'date': 'Friday', 'icon': 'raincloudy', 'lowTemp': 25, 'highTemp': 40 },
+        { 'date': 'Saturday', 'icon': 'thunderstorms', 'lowTemp': 30, 'highTemp': 43 },
+        { 'date': 'Sunday', 'icon': 'sunny', 'lowTemp': 26, 'highTemp': 42 }
       ]
     }
+  },
+  methods: {
+    fetchWeather: function () {
+      console.log('TODO')
+    }
+  },
+  created: function () {
+    this.fetchWeather
   }
 }
 </script>
@@ -57,11 +65,20 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .weather {
+  width: 100%;
   padding: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0,2);
+}
+
+@media (min-width: 700px) {
+  .weather {
+    width: 700px;
+  }
 }
 
 .location {
   font-size: 3em;
+  color: black;
 }
 
 .date {
@@ -82,8 +99,64 @@ export default {
   width: 50%;
 }
 
+.visual .icon{
+  width: 64px;
+  height: 64px;
+}
+
 .text {
   width: 50%;
   float: right;
+}
+
+.forecast-day {
+  display: inline-block;
+  width: 14,285%;
+}
+
+.forecast-day div {
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+}
+
+.forecast-day date {
+  font-size: 0.5em;
+}
+
+.forecast-day .icon {
+  width: 64px;
+  height: 64px;
+}
+
+.icon {
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.icon.cloudy {
+  background-image: url('../assets/cloudy.png');
+}
+
+.icon.partly {
+  background-image: url('../assets/partly_cloudy.png');
+}
+
+.icon.raining {
+  background-image: url('../assets/rain.png');
+}
+
+.icon.raincloudy {
+  background-image: url('../assets/rain_s_cloudy.png');
+}
+
+.icon.thunderstorms {
+  background-image: url('../assets/thunderstorms.png');
+}
+
+.icon.sunny {
+  background-image: url('../assets/sunny.png');
 }
 </style>
