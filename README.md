@@ -33,5 +33,5 @@ A continuació podeu trobar enllaços d'interès relacionats amb la pràctica *W
  * [Acacha Wiki (Alumne):](http://acacha.org/mediawiki/Usuari:Rogerforne/CSS) El meu Wiki sobre CSS.
  * [Acacha Wiki (curs 2016-17):](http://acacha.org/mediawiki/2DAM_2016-17/CSS#.WMaGyzvhCUk) Wikis dels alumnes.
  * [Acacha Wiki (Weather component):](http://acacha.org/mediawiki/2DAM_2016-17/Weather_component#.WNf_KvGLRqN) Wiki dels alumnes.
- * [URL Weather (Github Pages):](https://rogerforner.github.io/responsiveWeather/) Pàgina amb l'exemple de la pràctica.
+ * [URL Weather (Github Pages):](https://rogerforner.github.io/responsiveWeather/dist/) Pàgina amb l'exemple de la pràctica.
  * [Markdown:](https://guides.github.com/features/mastering-markdown/) Guia de Markdown de GitHub (emprat en el README.md).
