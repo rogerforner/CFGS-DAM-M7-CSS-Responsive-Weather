@@ -1,27 +1,37 @@
-# responsive
+# Tinkering CSS; <small>Responsive Weather</small>
 
-> A Vue.js project
+> Pràctica realitzada amb Vue.js
 
-## Build Setup
+## Posada en martxa
 
 ``` bash
-# install dependencies
+# Instal·lar dependències
 npm install
 
-# serve with hot reload at localhost:8080
+# Arrancar en localhost:8080 (visualitzar en navegador)
 npm run dev
 
-# build for production with minification
+# Producció (minificació)
 npm run build
 
-# run unit tests
+# Dur a terme els "unit" tests
 npm run unit
 
-# run e2e tests
+# Dur a terme els "e2e" tests
 npm run e2e
 
-# run all tests
+# Dur a terme tots els tests
 npm test
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Per a més informació, visita la [guia](http://vuejs-templates.github.io/webpack/) i els [documents de vue-loader](http://vuejs.github.io/vue-loader) (anglès).
+
+## Referències
+
+A continuació podeu trobar enllaços d'interès relacionats amb la pràctica *Weather component*.
+
+ * [Acacha Wiki (Alumne):](http://acacha.org/mediawiki/Usuari:Rogerforne/CSS) El meu Wiki sobre CSS.
+ * [Acacha Wiki (curs 2016-17):](http://acacha.org/mediawiki/2DAM_2016-17/CSS#.WMaGyzvhCUk) Wikis dels alumnes.
+ * [Acacha Wiki (Weather component):](http://acacha.org/mediawiki/2DAM_2016-17/Weather_component#.WNf_KvGLRqN) Wiki dels alumnes.
+ * [URL Weather (Github Pages):](https://rogerforner.github.io/responsiveWeather/) Pàgina amb l'exemple de la pràctica.
+ * [Markdown:](https://guides.github.com/features/mastering-markdown/) Guia de Markdown de GitHub (emprat en el README.md).
