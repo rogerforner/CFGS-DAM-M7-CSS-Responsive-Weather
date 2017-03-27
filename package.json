@@ -2,7 +2,7 @@
   "name": "responsive",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "rogerforner.com <rogerforne@iesebre.com>",
+  "author": "Roger Forne(r) Fabre <rogerforne@iesebre.com>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
